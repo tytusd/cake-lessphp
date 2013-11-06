@@ -2,29 +2,14 @@
 	"name": "clooder/cakeless",
     "description": "Cakephp Less ",
     "license": "MIT",
-    "keywords": ["cakephp", "less"],
-    "version": "dev",
-    "type": "cakephp-installer",
+    "keywords": ["cakephp", "less"], 
+    "type": "cakephp-plugin",
     "minimum-stability" : "dev", 
-	"repositories": [
-        {
-            "type": "package",
-            "package": {
-            	"name": "leafo/lessphp",
-                "version": "master",             
-                "source": {
-                    "url": "https://github.com/leafo/lessphp.git",
-                    "type": "git",
-                    "reference": "master"
-                } 
-                
-            }
-        }
-    ],            
+	             
    "require": {
    		"php": ">=5.3.0",
         "composer/installers": "*",
-        "leafo/lessphp": "master"
+        "leafo/lessphp": "dev-master"
     },
     "config": {
         "vendor-dir": "Vendor"
