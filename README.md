@@ -5,13 +5,6 @@ Everything is compiled on the server, cached, and served as regular css through 
 
 ## Installation
 
-### Get the files in place
-
-#### Git submodule
-
-If you are developing your application with Git already, you can install the plugin as a submodule. In your git base folder type
-
-    git submodule add https://github.com/Hyra/less.git app/Plugin/Less
 
 #### Git clone
 
@@ -19,12 +12,15 @@ In your plugin directory type
 
     git clone https://github.com/Hyra/less.git Less
 
-### Initialize lessphp submodule and download files
+#### Composer
 
-In the plugin folder ('app/Plugins/Less') type
+In your root cakephp 
 
-    git submodule init
-    git submodule update
+	"require" : {
+		"cakephp/less": "dev-master"
+	}
+	
+	composer install
 
 ### Create cache and less folders
 
