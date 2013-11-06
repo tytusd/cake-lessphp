@@ -1,5 +1,5 @@
 {
-	"name": "cakephp",
+	"name": "cakephp/less",
     "description": "Less for Cakephp",
     "licence": "MIT",
     "version": "dev",
