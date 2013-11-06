@@ -1,7 +1,8 @@
 {
 	"name": "cakephp/less",
-    "description": "Less for Cakephp",
-    "licence": "MIT",
+    "description": "Cakephp Less ",
+    "license": "MIT",
+    "keywords": ["cakephp", "less"],
     "version": "dev",
     "type": "cakephp-installer",
     "minimum-stability" : "dev", 
@@ -21,11 +22,15 @@
         }
     ],            
    "require": {
-   		"composer/installers": "dev-master",
+   		"php": ">=5.3.0",
+        "composer/installers": "*",
         "leafo/lessphp": "master"
     },
     "config": {
         "vendor-dir": "Vendor"
     }
-	
+	,
+    "extra": {
+        "installer-name":"Less"
+    }
 }
