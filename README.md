@@ -27,29 +27,30 @@ In your cakephp's root directory type
 
 In your root cakephp, edit your composer.json to fit:
 
-	"require" : {
-        "composer/installers": "*",
+```json
+"require" : {
+	"composer/installers": "*",
 		"songphi/cakephp-less": "dev-master",
 		"oyejorge/less.php": "~1.7",
-	},
-	"extra": {
-        "installer-paths": {
-            "app/Plugin/{$name}/": ["songphi/cakephp-less"]
-        }
-    }
+},
+"extra": {
+	"installer-paths": {
+	"app/Plugin/{$name}/": ["songphi/cakephp-less"]
+}
+```
 
 #### Plugin Loading
 
 In your app/Config/bootstrap.php add this line:
 
 ```php
-	CakePlugin::load('CakeLess');
+CakePlugin::load('CakeLess');
 ```
 
 It doesn't need if you are already has this line:
 
 ```php
-	CakePlugin::loadAll();
+CakePlugin::loadAll();
 ```
 
 ### Create cache and less folders
@@ -62,28 +63,28 @@ It doesn't need if you are already has this line:
 Where you want to use LESS files, add the helper. Usually this will be your `AppController`.
 
 ```php
-	public $helpers = array('CakeLess.Less');
+public $helpers = array('CakeLess.Less');
 ```
 
 Next, simply add the less files to your views:
 
 ```php
-	echo $this->Less->css('yourfile');
+echo $this->Less->css('yourfile');
 ```
 
 or if the less file is located in the webroot of a plugin
 
 ```php
-	echo $this->Less->css('yourfile',array('plugin' => 'PluginFolderName'));
+echo $this->Less->css('yourfile',array('plugin' => 'PluginFolderName'));
 ```
 
 or
 
 ```php	
-	echo $this->Less->css(array(
-			'bootstrap/bootstrap',
-			'prettify',
-		)
-	);
+echo $this->Less->css(array(
+		'bootstrap/bootstrap',
+		'prettify',
+	)
+);
 ```
 
