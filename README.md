@@ -28,6 +28,7 @@ In your cakephp's root directory type
 In your root cakephp, edit your composer.json to fit:
 
 	"require" : {
+        "composer/installers": "*",
 		"songphi/cakephp-less": "dev-master",
 		"oyejorge/less.php": "~1.7",
 	},
@@ -36,7 +37,21 @@ In your root cakephp, edit your composer.json to fit:
             "app/Plugin/{$name}/": ["songphi/cakephp-less"]
         }
     }
-	
+
+#### Plugin Loading
+
+In your app/Config/bootstrap.php add this line:
+
+```php
+	CakePlugin::load('CakeLess');
+```
+
+It doesn't need if you are already has this line:
+
+```php
+	CakePlugin::loadAll();
+```
+
 ### Create cache and less folders
 
 - Create a folder `app/webroot/less`
@@ -46,25 +61,29 @@ In your root cakephp, edit your composer.json to fit:
 ## Usage
 Where you want to use LESS files, add the helper. Usually this will be your `AppController`.
 
+```php
 	public $helpers = array('CakeLess.Less');
+```
 
 Next, simply add the less files to your views:
 
+```php
 	echo $this->Less->css('yourfile');
+```
 
 or if the less file is located in the webroot of a plugin
 
+```php
 	echo $this->Less->css('yourfile',array('plugin' => 'PluginFolderName'));
-	
+```
+
 or
-	
+
+```php	
 	echo $this->Less->css(array(
 			'bootstrap/bootstrap',
 			'prettify',
 		)
 	);
-
-It doesn't matter if you link to stolen .css files directly, the Helper will check for the existance of a .less version first, and fall back if it doesn't find one.
-
-If it does find a corresponding .less file with the same name in your less directory, it will compile it to css and place it in your css directory
+```
 
