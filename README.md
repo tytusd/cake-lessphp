@@ -3,6 +3,9 @@
 This little Helper converts your .less files into .css without relying on Node.js or client-side parsing.
 Everything is compiled on the server, cached, and served as regular css through PHP.
 
+Forked from flug/CakeLess because of leafo/lessphp doesn't compatible with Twitter Bootstrap 3. Now 
+oyejorge/less.php is using instead
+
 ## Installation
 
 
@@ -14,7 +17,7 @@ In your cakephp's root directory type
 
 #### Composer
 
-In your root cakephp 
+In your root cakephp, edit your composer.json to fit:
 
 	"require" : {
 		"songphi/cakephp-less": "dev-master",
@@ -26,8 +29,6 @@ In your root cakephp
         }
     }
 	
-	composer install
-
 ### Create cache and less folders
 
 - Create a folder `app/webroot/less`

@@ -1,6 +1,7 @@
 {
     "name": "songphi/cakephp-less",
-    "description": "Cakephp Less ",
+    "description": "Cakephp Less (forked from cakephp/less because of leafo/lessphp doesn't compatible with Twitter Bootstrap 3. Now 
+oyejorge/less.php is using instead)",
     "license": "MIT",
     "keywords": ["cakephp", "less", "songphi"],
     "type": "cakephp-plugin",
