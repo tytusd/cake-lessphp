@@ -9,6 +9,14 @@ oyejorge/less.php is using instead
 ## Installation
 
 
+#### Git Submodule
+
+In your cakephp's root directory type
+
+	git submodule add https://github.com/SongPhi/cake-lessphp.git app/Plugin/Less
+	git submodule init
+	git submodule update
+
 #### Git clone
 
 In your cakephp's root directory type
