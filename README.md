@@ -8,30 +8,36 @@ Everything is compiled on the server, cached, and served as regular css through 
 
 #### Git clone
 
-In your plugin directory type
+In your cakephp's root directory type
 
-    git clone https://github.com/Hyra/less.git Less
+    git clone https://github.com/SongPhi/cake-lessphp.git app/Plugin/CakeLess
 
 #### Composer
 
 In your root cakephp 
 
 	"require" : {
-		"cakephp/less": "dev-master"
-	}
+		"songphi/cakephp-less": "dev-master",
+		"oyejorge/less.php": "~1.7",
+	},
+	"extra": {
+        "installer-paths": {
+            "app/Plugin/{$name}/": ["songphi/cakephp-less"]
+        }
+    }
 	
 	composer install
 
 ### Create cache and less folders
 
-- Create a folder called `less` in `app/webroot/`
-- Create a folder called `less` in `app/tmp/cache`
+- Create a folder `app/webroot/less`
+- Create a folder `app/tmp/cache/less`
 - Apply `chmod 777` to your `css` folder. (The Less Helper will place all compiled css files in your css-directory)
 
 ## Usage
 Where you want to use LESS files, add the helper. Usually this will be your `AppController`.
 
-	public $helpers = array('Less.Less');
+	public $helpers = array('CakeLess.Less');
 
 Next, simply add the less files to your views:
 
