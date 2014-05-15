@@ -13,7 +13,7 @@ oyejorge/less.php is using instead
 
 In your cakephp's root directory type
 
-	git submodule add https://github.com/SongPhi/cake-lessphp.git app/Plugin/Less
+	git submodule add https://github.com/SongPhi/cake-lessphp.git app/Plugin/CakeLess
 	git submodule init
 	git submodule update
 
