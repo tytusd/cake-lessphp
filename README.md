@@ -48,7 +48,7 @@ In your app/Config/bootstrap.php add this line:
 CakePlugin::load('CakeLess');
 ```
 
-It doesn't need if you are already has this line:
+It doesn't need if you already have this line:
 
 ```php
 CakePlugin::loadAll();
