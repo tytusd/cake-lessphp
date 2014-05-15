@@ -31,7 +31,7 @@ In your root cakephp, edit your composer.json to fit:
 "require": {
 	"composer/installers": "*",
 	"songphi/cakephp-less": "dev-master",
-	"oyejorge/less.php": "~1.7",
+	"oyejorge/less.php": "~1.7"
 },
 "extra": {
 	"installer-paths": {
