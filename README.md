@@ -28,10 +28,10 @@ In your cakephp's root directory type
 In your root cakephp, edit your composer.json to fit:
 
 ```json
-"require" : {
+"require": {
 	"composer/installers": "*",
-		"songphi/cakephp-less": "dev-master",
-		"oyejorge/less.php": "~1.7",
+	"songphi/cakephp-less": "dev-master",
+	"oyejorge/less.php": "~1.7",
 },
 "extra": {
 	"installer-paths": {
