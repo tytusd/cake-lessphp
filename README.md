@@ -35,7 +35,8 @@ In your root cakephp, edit your composer.json to fit:
 },
 "extra": {
 	"installer-paths": {
-	"app/Plugin/{$name}/": ["songphi/cakephp-less"]
+		"app/Plugin/{$name}/": ["songphi/cakephp-less"]
+	}
 }
 ```
 
