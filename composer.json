@@ -1,8 +1,8 @@
 {
-    "name": "songphi/cakephp-less",
+    "name": "tytusd/cakephp-less",
     "description": "Cakephp Less CSS compiler (forked from cakephp/less because of leafo/lessphp doesn't compatible with Twitter Bootstrap 3. Now oyejorge/less.php is being used instead)",
     "license": "MIT",
-    "keywords": ["cakephp", "less", "songphi"],
+    "keywords": ["cakephp", "less", "tytusd"],
     "type": "cakephp-plugin",
     "minimum-stability": "dev",
 
