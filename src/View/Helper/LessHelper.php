@@ -19,20 +19,34 @@
  * @copyright     Copyright 2011, Mindthecode (http://www.mindthecode.com)
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::uses('Folder', 'Utility');
-App::uses('File', 'Utility');
-App::uses('Component', 'Controller');
-App::import('Vendor', 'CakeLess.Lessc',
+namespace CakeLess\View\Helper;
+//require_once __DIR__."/../../../../../vendor/oyejorge/less.php/lessc.inc.php";
+
+use Cake\Core\Configure;
+use Cake\Error\Debugger;
+use Cake\Filesystem\File;
+use Cake\Filesystem\Folder;
+use Cake\Log\Log;
+use Cake\View\Helper;
+use Cake\View\View;
+use Cake\Controller\Component;
+
+/*App::import('Vendor', 'CakeLess.Lessc',
   array(
     'file' => 'oyejorge' . DS . 'less.php' . DS . 'lessc.inc.php'
   )
-);
+);*/
+/**
+ * LessHelper class
+ *
+ * @uses          AppHelper
+ * @since         v 1.0 (22-Jun-2009)
+ */
+class LessHelper extends Helper {
 
-class LessHelper extends AppHelper {
+	public $helpers = ['Html'];
 
-	public $helpers = array('Html');
-
-	public function __construct(View $View, $options = array()) {
+	public function __construct(View $View, array $options = array()) {
 		parent::__construct($View, $options);
 		$this->lessFolder = new Folder(WWW_ROOT.'less');
 		$this->cssFolder = new Folder(WWW_ROOT.'css');
@@ -460,12 +474,12 @@ class nodecounter {
 /**
 * create a less file from a css file by combining blocks where appropriate
 */
-class lessify extends lessc {
+class lessify extends \lessc {
 	public function dump() {
 		print_r($this->env);
 	}
 
-	public function parse($str = null) {
+	public function parse($str = null, $presets = array()) {
 		$this->prepareParser($str ? $str : $this->buffer);
 		while (false !== $this->parseChunk());
 
