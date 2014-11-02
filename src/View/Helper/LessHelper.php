@@ -20,7 +20,6 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 namespace CakeLess\View\Helper;
-//require_once __DIR__."/../../../../../vendor/oyejorge/less.php/lessc.inc.php";
 
 use Cake\Core\Configure;
 use Cake\Error\Debugger;
@@ -31,11 +30,6 @@ use Cake\View\Helper;
 use Cake\View\View;
 use Cake\Controller\Component;
 
-/*App::import('Vendor', 'CakeLess.Lessc',
-  array(
-    'file' => 'oyejorge' . DS . 'less.php' . DS . 'lessc.inc.php'
-  )
-);*/
 /**
  * LessHelper class
  *
